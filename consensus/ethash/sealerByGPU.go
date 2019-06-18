@@ -138,6 +138,7 @@ func (ethash *Ethash) minebyGPU(block *types.Block, id int, seed uint64, abort c
 		orderHash = header.HashNoNonce().Bytes()
 	}
 
+	log.Trace("orderHash", orderHash)
 	// Start generating random nonces until we abort or find a good one
 	var (
 		// attempts = int64(0)
